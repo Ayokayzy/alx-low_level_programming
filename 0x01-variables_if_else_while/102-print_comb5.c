@@ -12,19 +12,22 @@
 
 int main(void)
 {
-	int unit;
-	int tens;
+	int dig1;
+	int dig2;
 
-	for (tens = 0; tens < 10; tens++)
+	for (dig1 = 0; dig1 < 100; dig1++)
 	{
-		for (unit = 0; unit < 10; unit++)
+		for (dig2 = 0; dig2 < 100; dig2++)
 		{
-			if (tens < unit && tens != unit)
+			if (dig1 != dig2 && dig1 < dig2)
 			{
-				putchar(tens + '0');
-				putchar(unit + '0');
+				putchar((dig1 / 10) + '0');
+				putchar((dig1 % 10) + '0');
+				putchar(' ');
+				putchar((dig2 / 10) + '0');
+				putchar((dig2 % 10) + '0');
 
-				if (tens == 8 && unit == 9)
+				if (dig1 == 98 && dig2 == 99)
 				{
 					putchar('\n');
 				}
