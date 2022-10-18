@@ -1,5 +1,5 @@
-/* Declare the printf() function */
-int printf(const char *format, ...);
+#include <stdio.h>
+#include "main.h"
 
 /**
 * main - Entry point
@@ -11,7 +11,13 @@ int printf(const char *format, ...);
 
 int main(void)
 {
-	printf("_putchar\n");
+	char str[] = "_putchar\n";
+	int i = 0;
 
-	return (0);
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	return(0);
 }
