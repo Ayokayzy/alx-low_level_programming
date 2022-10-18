@@ -1,4 +1,5 @@
-#include <stdio.h>
+/* Declare the printf() function */
+int printf(const char *format, ...);
 
 /**
 * main - Entry point
