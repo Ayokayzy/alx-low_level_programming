@@ -1,23 +1,23 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
-* main - Entry point
+* main - Entry Point
 *
-* Describe: A program that prints "_putchar"
+* Description: print _putchar
 *
 * Return: Always 0 (success)
 */
 
 int main(void)
 {
-	char str[] = "_putchar\n";
+	char c[] = "_putchar\n";
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (c[i] != '\0')
 	{
-		_putchar(str[i]);
-		i++;
+		char str = c[i];
+		_putchar(str);
+		 i++;
 	}
-	return(0);
+	return (0);
 }
