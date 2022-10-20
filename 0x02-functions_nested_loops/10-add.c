@@ -8,7 +8,7 @@
 * Return: sum
 */
 
-inr add(int n1, int n2)
+int add(int n1, int n2)
 {
 	int sum;
 
