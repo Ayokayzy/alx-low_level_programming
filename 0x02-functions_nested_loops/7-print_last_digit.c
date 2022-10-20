@@ -6,7 +6,7 @@
 * Return: value of the last digit
 */
 
-int print_last_digit(it n)
+int print_last_digit(int n)
 {
 	int digit = n % 10;
 
