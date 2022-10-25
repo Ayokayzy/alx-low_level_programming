@@ -8,7 +8,7 @@
 * Return: void
 */
 
-void(char *str)
+void print_rev(char *str)
 {
 	int len;
 
