@@ -16,11 +16,12 @@ void print_array(int *a, int n)
 	{
 		if (i != n)
 		{
-			printf("%s, ", a[i]);
+			printf(a[i]);
+			printf(", ");
 		}
 		else
 		{
-			printf("%s", a[i]);
+			printf(a[i]);
 		}
 		i++;
 	}
