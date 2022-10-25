@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -10,10 +11,15 @@
 
 void print_rev(char *str)
 {
-	int len;
+	int len = 0;
 
-	len = strlen(str);
-	while (str[len] > 0)
+	while (str[len])
+	{
+		len ++;
+	}
+	printf("length: %d\n", len);
+
+	while (len >= 0)
 	{
 		_putchar(str[len]);
 		len--;
