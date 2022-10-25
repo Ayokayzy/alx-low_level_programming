@@ -15,7 +15,7 @@ void print_rev(char *str)
 
 	while (str[len])
 	{
-		len ++;
+		len++;
 	}
 	while (len--)
 	{
