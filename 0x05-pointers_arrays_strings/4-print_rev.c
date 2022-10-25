@@ -17,10 +17,9 @@ void print_rev(char *str)
 	{
 		len ++;
 	}
-	while (len >= 0)
+	while (len--)
 	{
 		_putchar(str[len]);
-		len--;
 	}
 	_putchar('\n');
 }
