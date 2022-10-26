@@ -15,13 +15,14 @@ char *_strcpy(char *dest, char *src)
 
 	while (src[len])
 		len++;
+	/* printf("%s", src[47]); */
 
 	i = 0;
 
 	while (len--)
 	{
 		dest[i] = src[i];
-		if (dest[i] == 0)
+		if (len == 0)
 			dest[i + 1] = '\0';
 		i++;
 	}
