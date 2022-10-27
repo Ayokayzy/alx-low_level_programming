@@ -18,10 +18,16 @@ int _strcmp(char *s1, char *s2)
 		s2len++;
 
 	if (s1len > s2len)
+	{
 		val = 15;
-	if (s1len == s2len)
+	}
+	else if (s1len == s2len)
+	{
 		val = 0;
-	if (s1len < s2len)
+	}
+	else if (s1len < s2len)
+	{
 		val = -15;
+	}
 	return (val);
 }
