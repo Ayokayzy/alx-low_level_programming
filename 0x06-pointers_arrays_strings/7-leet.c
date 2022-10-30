@@ -13,7 +13,7 @@ char *leet(char *str)
 
 	while (str[idx1])
 	{
-		for (idx2 = 0; idx <= 7, idx2++)
+		for (idx2 = 0; idx2 <= 7, idx2++)
 		{
 			if (str[idx1] == leet[idx2] ||
 				str[idx1] - 32 == leet[idx2])
