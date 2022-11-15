@@ -19,15 +19,15 @@ char *str_concat(char *s1, char *s2)
 	int totlen;
 	char *concat;
 
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[s1len])
 		s1len++;
 	while (s2[s2len])
 		s2len++;
 	totlen = s1len + s2len;
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
 	concat = malloc(sizeof(char) * (totlen + 1));
 	if (concat == NULL)
 		return (NULL);
