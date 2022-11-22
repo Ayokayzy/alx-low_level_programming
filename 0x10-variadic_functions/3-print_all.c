@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	while (format && format[i])
 	{
 		j = 0;
-		while (t_args[j])
+		while (t_arg[j])
 		{
 			if (format[i] == t_arg[j] && c)
 			{
@@ -33,7 +33,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(ap, int)), c = 1;
 				break;
 			case 'f':
-				printf("%d", va_arg(ap, double)), c = 1;
+				printf("%f", va_arg(ap, double)), c = 1;
 				break;
 			case 's':
 				str = va_arg(ap, char *), c = 1;
@@ -46,5 +46,5 @@ void print_all(const char * const format, ...)
 				break;
 		} i++;
 	}
-	printf("\n"), va_end(va_list);
+	printf("\n"), va_end(ap);
 }
