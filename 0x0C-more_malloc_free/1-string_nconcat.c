@@ -33,10 +33,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = s2len;
 
 	newstr = malloc(sizeof(*newstr) * (s1len + n));
+	if (newstr == NULL)
+		return (NULL);
 	for (idx = 0; idx < s1len; idx++)
 		newstr[idx] = s1[idx];
 	for (idx = 0; idx < n; idx++)
 		newstr[s1len++] = s2[idx];
-	newstr[s1len + n + 1] = '\0';
+	newstr[s1len] = '\0';
 	return (newstr);
 }
