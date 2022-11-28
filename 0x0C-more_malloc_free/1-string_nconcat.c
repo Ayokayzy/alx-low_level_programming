@@ -17,11 +17,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *newstr;
 
 	s1len = 0;
-	while(s1[s1len])
+	while (s1[s1len])
 		s1len++;
 
 	s2len = 0;
-	while(s2[s2len])
+	while (s2[s2len])
 		s2len++;
 
 	if (n >= s2len)
@@ -32,6 +32,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		newstr[idx] = s1[idx];
 	for (idx = 0; idx < n; idx++)
 		newstr[s1len++] = s2[idx];
-	newstr[s2len + n + 1] = '\0';
+	newstr[s1len + n + 1] = '\0';
 	return (newstr);
 }
