@@ -16,15 +16,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *filler;
 	unsigned int idx;
 
-	if (nmemb == 0)
-		return (NULL);
-	if (size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 	mem = malloc(size * nmemb);
 	if (mem == NULL)
 		return (NULL);
+
 	filler = mem;
+
 	for (idx = 0; idx < nmemb; idx++)
 		filler[idx] = '\0';
 	return (mem);
