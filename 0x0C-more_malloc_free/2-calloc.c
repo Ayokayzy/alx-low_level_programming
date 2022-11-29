@@ -25,7 +25,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	filler = mem;
 
-	for (idx = 0; idx < nmemb; idx++)
+	for (idx = 0; idx < (nmemb * size); idx++)
 		filler[idx] = '\0';
 	return (mem);
 }
