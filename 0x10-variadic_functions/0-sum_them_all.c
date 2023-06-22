@@ -15,12 +15,14 @@ int sum_them_all(const unsigned int n, ...)
 
 	if (n == 0)
 		return (0);
+
 	va_start(op, n);
 
 	for (idx = 0; idx < n; idx++)
 	{
 		sum += va_arg(op, int);
 	}
+
 	va_end(op);
 	return (sum);
 }
