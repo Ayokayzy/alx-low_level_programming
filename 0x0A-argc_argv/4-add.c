@@ -11,24 +11,26 @@
 
 int main(int argc, char **argv)
 {
-	int idx, num;
+	int i, j, num;
 	int add = 0;
 
 	if (argc < 2)
 	{
-		printf("Error\n");
+		printf("%d\n", 0);
 		return (0);
 	}
 
-	for (idx = 1; idx < argc; idx++)
+	for (i = 1; i < argc; i++)
 	{
-		if (argv[idx] > 64 && argv[idx] < 123)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (0);
+			if (argv[i][j] < '0' || argv[i][j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-
-		num = atoi(argv[idx]);
+		num = atoi(argv[i]);
 		add = add + num;
 	}
 	printf("%d\n", add);
