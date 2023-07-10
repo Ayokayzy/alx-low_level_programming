@@ -29,8 +29,12 @@ int _pow(int n, int power)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int dec = 0;
-	int i = 0, bit;
+	int i, bit;
 
+	if (b == NULL)
+		return (0);
+
+	i = 0;
 	while (b[i] != '\0')
 	{
 		if (b[i] != '1' && b[i] != '0')
