@@ -16,12 +16,12 @@ def island_perimeter(grid):
     length = 0
     last_col = 0
     land = 1
-    lands = []
 
     if len(grid) > 100:
         raise Exception("grid too big")
     if land in grid[0] or land in grid[len(grid) - 1]:
-        raise Exception("Island must be surrounded by water")
+        """raise Exception("Island must be surrounded by water")"""
+        return
     for rows in grid:
         if len(rows) > 100:
             raise Exception("grid too big")
@@ -32,10 +32,9 @@ def island_perimeter(grid):
         for i in range(len(rows)):
             if land == rows[0] or land == rows[len(rows) - 1]:
                 raise Exception("Island must be surrounded by water")
-            if rows[i] == 1:
-                if i not in lands and i > last_col:
+            if rows[i] == land:
+                if i > last_col:
                     length += 1
                     last_col = i
-                    lands.append(i)
 
     return 2 * (height + length)
